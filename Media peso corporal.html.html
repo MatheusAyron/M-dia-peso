@@ -1,0 +1,126 @@
+<meta charset="UTf-8">
+ 
+  <H1> Qual seu IMC ?</H1>
+  <body bgcolor="gray"></body>
+   
+ 
+<script>
+
+ alert ("Qual seu IMC. Quer continuar, clique em OK"); 
+
+   var ano = 2020;
+
+   
+    function pula(){
+       document.write("<br>");
+       }
+       
+    function mostra(frase){
+
+      document.write(frase);
+      pula()
+    
+    }
+
+      function valorImc(nome,idade,peso, altura){
+
+       return  peso / (altura * altura); 
+       
+    }
+         
+      var nomeInformado = prompt("Qual seu nome ?");
+      var idadeInformada = prompt("Qual sua idade ?");
+      var alturaInformada = prompt("Qual sua altura ?");
+      var pesoInformado = parseInt(prompt("Qual seu peso ?"));
+      var pesoLimite = parseInt(prompt("Qual peso você não que ultrapassar ?"));
+      
+
+      var imc = valorImc(nomeInformado,idadeInformada,pesoInformado,alturaInformada);
+      var arrendodamento = Math.round(imc);      
+
+      mostra("Sua altura é " + alturaInformada);
+      document.write("O seu peso é " + pesoInformado); 
+
+
+      if(pesoInformado == pesoLimite){
+        mostra(". Seu peso está aceitavel.");
+      }
+
+      if(pesoInformado < pesoLimite){
+
+        mostra(". Seu peso está menor que o Limite");
+      }
+      
+      if(pesoInformado > pesoLimite){
+        mostra(". Seu peso está maior que o esperado");
+      }
+       
+            
+      mostra("Sua idade é " + idadeInformada);  
+      document.write(nomeInformado , " o seu imc arredondado  é " + arrendodamento);
+      pula()
+      
+
+      if(arrendodamento >= 18 & arrendodamento <= 24 ){
+
+        mostra("O seu IMC esta na média.");
+        mostra("Parabéns.");
+      }
+      
+      if(arrendodamento > 24){ 
+
+        mostra("O seu IMC está muito alto.");
+        mostra("Você precisa parar de comer tanto.");
+      } 
+
+      if(arrendodamento < 18){
+
+        mostra("Seu IMC está baixo.");
+        mostra("Tem que melhorar");
+      }
+
+     
+
+</script>
+
+
+  <canvas width="600" height="400"></canvas>
+
+  <script>
+
+     var tela = document.querySelector("canvas");
+     var pincel = tela.getContext("2d");
+
+     pincel.fillStyle = "darkgreen";
+     pincel.fillRect(300, 110, 350, 300);
+
+     pincel.fillStyle = "black";
+     pincel.fillRect(320,150,90,90);
+
+     pincel.fillStyle = "black";
+     pincel.fillRect(490, 150, 90, 90);
+
+     pincel.fillStyle = "black";
+     pincel.fillRect(415, 240, 70, 100);
+
+     pincel.fillStyle = "black";
+     pincel.fillRect(380, 270, 40, 110);
+
+     pincel.fillStyle = "black";
+     pincel.fillRect(480, 270, 40, 110);
+
+
+
+
+//     pincel.fillStyle = "red";
+//     pincel.beginPath();
+ //    pincel.arc(300,250, 50,0,2 * 3.14);
+ //    pincel.fill();
+
+
+    
+
+
+
+
+  </script>
